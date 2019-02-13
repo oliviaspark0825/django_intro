@@ -14,3 +14,10 @@ def dinner(request):
     # return HttpResponse(random.choice(menu))
     pick = random.choice(menus)
     return render(request, 'dinner.html', {'menus': menus, 'pick': pick})
+
+def hello(request, name):
+    return render(request, 'hello.html', {'name': name})
+    
+def cube(request,num):
+    ans = num **3
+    return render(request, 'cube.html', {'ans': ans, 'num': num})

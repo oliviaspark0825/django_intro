@@ -19,6 +19,7 @@ from home import views
 
 
 urlpatterns = [
+    path('home/static_example/', views.static_example, name='static_example'),
     path('home/template_example/', views.template_example, name='template_example'),
     path('home/user_create/', views.user_create, name='user_create'),
     path('home/user_new/', views.user_new, name='user_new'),

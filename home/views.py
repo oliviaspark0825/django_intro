@@ -9,38 +9,38 @@ def index(request):
     # print(type(request))
     # pprint(request.META)
     # return HttpResponse('goed morgen!')
-    return render(request, 'index.html')
+    return render(request, 'home/index.html')
     
 def dinner(request):
     menus = ['닭볶음탕', '치킨', '소고기']
     # return HttpResponse(random.choice(menu))
     pick = random.choice(menus)
-    return render(request, 'dinner.html', {'menus': menus, 'pick': pick})
+    return render(request, 'home/dinner.html', {'menus': menus, 'pick': pick})
 
 def hello(request, name):
-    return render(request, 'hello.html', {'name': name})
+    return render(request, 'home/hello.html', {'name': name})
     
 def cube(request,num):
     ans = num **3
-    return render(request, 'cube.html', {'ans': ans, 'num': num})
+    return render(request, 'home/cube.html', {'ans': ans, 'num': num})
     
 def ping(request):
-    return render(request, 'ping.html')
+    return render(request, 'home/ping.html')
     
 def pong(request):
     print(request.GET)
     data = request.GET.get('data')
-    return render(request, 'pong.html', {'data': data})
+    return render(request, 'home/pong.html', {'data': data})
 
 def user_new(request):
     # 닉네임, 패스워드를 받아서
-    return render(request, 'user_new.html')
+    return render(request, 'home/user_new.html')
     
     
 def user_create(request):
     nickname = request.POST.get('nickname')
     pw = request.POST.get('pw')
-    return render(request, 'user_create.html', {'nickname' : nickname, 'pw': pw})
+    return render(request, 'home/user_create.html', {'nickname' : nickname, 'pw': pw})
     #post 방식으로
 
 def template_example(request):
@@ -56,4 +56,4 @@ def template_example(request):
                 })
 
 def static_example(request):
-    return render(request, 'static_example.html')
+    return render(request, 'home/static_example.html')

@@ -18,6 +18,7 @@ from django.urls import path, include
 
 
 urlpatterns = [
+    path('utilities/', include('utilities.urls')),
     path('home/', include('home.urls')),
     # url을 불러오겠다 여기에 home 이 붙어있으니까 다른 urls 파일 path 에서 home 을 지운거임
     path('admin/', admin.site.urls),

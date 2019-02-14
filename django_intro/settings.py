@@ -56,7 +56,8 @@ ROOT_URLCONF = 'django_intro.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'django_intro', 'templates')],
+        # project01/django_intro/templates/base.html <- 이렇게 들어가서 읽겠다
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
